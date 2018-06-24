@@ -6,7 +6,7 @@
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 08:35:54 by fhong             #+#    #+#             */
-/*   Updated: 2018/05/04 11:42:26 by fhong            ###   ########.fr       */
+/*   Updated: 2018/06/11 18:37:05 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,12 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_isupper(int c);
 int					ft_islower(int c);
+int					ft_isprime(unsigned long int n);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
+void				ft_swap(int *a, int *b);
 char				*ft_strnew(size_t size);
 void				ft_strdel(char **as);
 void				ft_strclr(char *s);

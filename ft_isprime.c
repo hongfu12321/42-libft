@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_isprime.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/02 09:50:44 by fhong             #+#    #+#             */
-/*   Updated: 2018/05/29 15:47:06 by fhong            ###   ########.fr       */
+/*   Created: 2018/05/04 12:02:27 by fhong             #+#    #+#             */
+/*   Updated: 2018/05/04 12:02:34 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strcat(char *dest, const char *src)
+int		ft_isprime(unsigned long int n)
 {
-	int i;
-	int j;
+	unsigned long int	i;
 
-	i = 0;
-	while (dest[i])
-		i++;
-	j = 0;
-	while (src[j])
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	return (dest);
+	if (n < 4)
+		return (n < 2 ? 0 : 1);
+	i = 2;
+	while (i <= n / i)
+		if (n % i)
+			i++;
+		else
+			return (0);
+	return (1);
 }
