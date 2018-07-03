@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/02 09:52:47 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/02 16:42:07 by fhong            ###   ########.fr       */
+/*   Created: 2018/06/30 14:43:45 by fhong             #+#    #+#             */
+/*   Updated: 2018/06/30 15:00:21 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	my_char_swap(char *a, char *b)
 {
-	size_t i;
+	char tmp;
 
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+void	ft_strrev(char *str)
+{
+	int	len;
+	int	i;
+
+	len = ft_strlen(str);
 	i = 0;
-	while (str[i])
+	while (i < len / 2)
+	{
+		my_char_swap(&str[i], &str[len - 1 - i]);
 		i++;
-	return (i);
+	}
 }
