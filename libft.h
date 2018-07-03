@@ -6,7 +6,7 @@
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 08:35:54 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/02 17:41:25 by fhong            ###   ########.fr       */
+/*   Updated: 2018/07/02 21:30:44 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ int					ft_isprint(int c);
 int					ft_isupper(int c);
 int					ft_islower(int c);
 int					ft_isprime(unsigned long int n);
+int					ft_intlen_base(int value, int base);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 void				*ft_memalloc(size_t size);
@@ -84,11 +85,13 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
+char				*ft_itoa_base(int value, int base);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
 void				ft_putnstr(char const *str, size_t size);
 void				ft_putendl(char const *s);
 void				ft_putnbr(int n);
+void				ft_put_base_unsigned(uintmax_t n, int base);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
