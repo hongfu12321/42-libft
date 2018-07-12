@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intlen_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/05 18:12:10 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/05 18:14:42 by fhong            ###   ########.fr       */
+/*   Created: 2018/07/11 19:20:04 by fhong             #+#    #+#             */
+/*   Updated: 2018/07/11 19:37:28 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_intlen_base(int value, int base)
-{
-	int		len;
+#include "libft.h"
 
-	len = 0;
-	if (value == 0)
-		return (1);
-	if (value < 0 && base == 10)
-		len++;
-	while (value)
+void	ft_putnbr_base(int value, char *base)
+{
+	int base_len;
+
+	base_len = ft_strlen(base);
+	if (value < 0)
 	{
-		value /= base;
-		len++;
+		write(1, "-", 1);
+		value *= (-1);
 	}
-	return (len);
+	if (value >= base_len)
+		ft_putnbr_base(value / base_len, base);
+	write(1, &base[value % base_len], 1);
+}
+
+int		main(void)
+{
+	ft_putnbr_base(31, "0123456789ABCDEF");
+	return (0);
 }
