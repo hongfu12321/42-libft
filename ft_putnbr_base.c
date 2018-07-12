@@ -6,7 +6,7 @@
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/11 19:20:04 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/11 19:37:28 by fhong            ###   ########.fr       */
+/*   Updated: 2018/07/11 19:40:21 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,4 @@ void	ft_putnbr_base(int value, char *base)
 	if (value >= base_len)
 		ft_putnbr_base(value / base_len, base);
 	write(1, &base[value % base_len], 1);
-}
-
-int		main(void)
-{
-	ft_putnbr_base(31, "0123456789ABCDEF");
-	return (0);
 }
