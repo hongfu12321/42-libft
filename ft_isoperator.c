@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_isoperator.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/11 19:20:04 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/11 19:40:50 by fhong            ###   ########.fr       */
+/*   Created: 2018/07/12 15:07:18 by fhong             #+#    #+#             */
+/*   Updated: 2018/07/12 15:08:37 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_base(int value, char *base)
+int		ft_isoperator(char c)
 {
-	int base_len;
-
-	base_len = ft_strlen(base);
-	if (value < 0)
-	{
-		write(1, "-", 1);
-		value *= (-1);
-	}
-	if (value >= base_len)
-		ft_putnbr_base(value / base_len, base);
-	write(1, &base[value % base_len], 1);
+	if (c == '+' || c == '-' || c == '*' ||
+			c == '/' || c == '%')
+		return (1);
+	return (0);
 }

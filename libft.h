@@ -6,7 +6,7 @@
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 08:35:54 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/11 19:38:22 by fhong            ###   ########.fr       */
+/*   Updated: 2018/07/12 15:09:43 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
 int					ft_isspace(char c);
 int					ft_isalpha(int c);
+int					ft_isoperator(char c);
 int					ft_isupper(int c);
 int					ft_islower(int c);
 int					ft_isalnum(int c);
