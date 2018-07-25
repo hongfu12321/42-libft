@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/02 16:13:50 by fhong             #+#    #+#             */
-/*   Updated: 2018/05/03 20:29:50 by fhong            ###   ########.fr       */
+/*   Created: 2018/07/24 23:09:23 by fhong             #+#    #+#             */
+/*   Updated: 2018/07/24 23:47:28 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
-	register int long	res;
-	register int		neg;
-	register const char	*s;
-	register int long	tmp;
+	int			i;
+	int			negative;
+	int			result;
 
-	s = str;
-	while (*s && ft_isspace(*s))
-		s++;
-	neg = 1;
-	if (*s == '+' || *s == '-')
-		if (*s++ == '-')
-			neg = -1;
-	res = 0;
-	while (*s >= '0' && *s <= '9')
+	i = 0;
+	negative = 1;
+	result = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
+			str[i] == '\r' || str[i] == '\f' || str[i] == '\v')
+		i++;
+	if (str[i] == '-')
+		negative = -1;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i] >= 48 && str[i] <= 57 && str[i] != '\0')
 	{
-		tmp = res * 10 + neg * (*s++ - '0');
-		if (neg > 0 && tmp < res)
-			return (-1);
-		if (neg < 0 && tmp > res)
-			return (0);
-		res = tmp;
+		result = result * 10 + (str[i] - 48);
+		i++;
 	}
-	return ((int)res);
+	return (negative * result);
 }

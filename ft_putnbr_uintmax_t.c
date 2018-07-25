@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put_base_unsigned.c                             :+:      :+:    :+:   */
+/*   ft_putnbr_intmax_t.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/30 14:38:49 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/06 06:23:48 by fhong            ###   ########.fr       */
+/*   Created: 2018/07/25 13:07:52 by fhong             #+#    #+#             */
+/*   Updated: 2018/07/25 13:10:31 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_put_base_unsigned(uintmax_t n, int base)
+void	ft_putnbr_uintmax_t(uintmax_t n)
 {
-	if (n >= (uintmax_t)base)
-		ft_put_base_unsigned(n / base, base);
-	n %= base;
-	n += n < 10 ? '0' : 'a' - 10;
-	write(1, &n, 1);
+	uintmax_t nb;
+
+	if (nb / 10)
+	{
+		ft_putnbr_uintmax_t(nb / 10);
+		ft_putchar(nb % 10 + '0');
+	}
+	else
+		ft_putchar(nb + '0');
 }

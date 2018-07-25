@@ -6,7 +6,7 @@
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 08:35:54 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/25 12:44:38 by fhong            ###   ########.fr       */
+/*   Updated: 2018/07/25 13:11:41 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,4 +122,10 @@ void				ft_putwchar(wchar_t c);
 void				ft_putwstr(wchar_t *wstr);
 void				ft_putnwstr(wchar_t *wstr, size_t n);
 
+
+/*
+** intmax_t uintmax_t
+*/
+
+void	ft_putnbr_uintmax_t(uintmax_t n);
 #endif
