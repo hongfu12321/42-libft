@@ -6,7 +6,7 @@
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 14:37:05 by fhong             #+#    #+#             */
-/*   Updated: 2018/05/22 18:09:20 by fhong            ###   ########.fr       */
+/*   Updated: 2018/07/13 11:30:42 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		if (!(ret->content = ft_memalloc(content_size)))
+		if (!(ret->content = ft_memalloc(content_size + 1)))
 		{
 			free(ret);
 			return (NULL);

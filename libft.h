@@ -6,7 +6,7 @@
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 08:35:54 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/12 15:09:43 by fhong            ###   ########.fr       */
+/*   Updated: 2018/07/24 22:44:17 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,13 +92,14 @@ void				ft_putstr(char const *s);
 void				ft_putnstr(char const *str, size_t size);
 void				ft_putendl(char const *s);
 void				ft_putnbr(int n);
-void				ft_putnbr_base(int value, char *base)
+void				ft_putnbr_base(intmax_t value, char *base);
 void				ft_put_base_unsigned(uintmax_t n, int base);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_put_char_times(char c, int times);
+void				ft_putlst(t_list *lst);
 t_list				*ft_lstnew(void const *content,
 					size_t content_size);
 void				ft_lstdelone(t_list **alst,
@@ -106,8 +107,18 @@ void				ft_lstdelone(t_list **alst,
 void				ft_lstdel(t_list **alst,
 					void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
+void				ft_lstadd_last(t_list *alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst,
 					t_list *(*f)(t_list *elem));
+
+/*
+** wchar
+*/
+
+size_t				ft_wstrlen(wchar_t *wstr);
+void				t_putwchar(wchar_t c);
+void				ft_putwstr(wchar_t *wstr);
+void				ft_putnwstr(wchar_t *wstr, size_t n);
 
 #endif

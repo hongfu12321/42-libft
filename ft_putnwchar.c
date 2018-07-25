@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.h                                         :+:      :+:    :+:   */
+/*   ft_putnwchar.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/02 14:28:41 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/13 12:09:37 by fhong            ###   ########.fr       */
+/*   Created: 2018/07/24 22:40:21 by fhong             #+#    #+#             */
+/*   Updated: 2018/07/24 22:44:24 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_putnwstr(wchar_t *wstr, size_t n)
 {
-	ft_memset(s, 0, n);
+	if (!wstr)
+		return ;
+	if (ft_wstrlen(wstr) >= n)
+		write(1, wstr, n);
+	else
+		return ;
 }

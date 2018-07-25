@@ -6,13 +6,13 @@
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/11 19:20:04 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/11 19:40:50 by fhong            ###   ########.fr       */
+/*   Updated: 2018/07/14 21:41:52 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_base(int value, char *base)
+void	ft_putnbr_base(intmax_t value, char *base)
 {
 	int base_len;
 
