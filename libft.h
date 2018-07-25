@@ -6,7 +6,7 @@
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 08:35:54 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/24 23:58:12 by fhong            ###   ########.fr       */
+/*   Updated: 2018/07/25 12:44:38 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
+# include <stdint.h>
 
 typedef struct		s_list
 {
@@ -65,7 +66,7 @@ int					ft_isprint(int c);
 int					ft_isupper(int c);
 int					ft_islower(int c);
 int					ft_isprime(unsigned long int n);
-size_t				ft_intlen_base(int value, int base);
+size_t				ft_intlen_base(intmax_t value, int base);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 void				*ft_memalloc(size_t size);

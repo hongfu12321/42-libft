@@ -6,11 +6,13 @@
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/05 18:12:10 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/05 18:14:42 by fhong            ###   ########.fr       */
+/*   Updated: 2018/07/25 12:44:03 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_intlen_base(int value, int base)
+#include "libft.h"
+
+size_t	ft_intlen_base(intmax_t value, int base)
 {
 	int		len;
 
