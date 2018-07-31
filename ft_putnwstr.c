@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_intmax_t.c                               :+:      :+:    :+:   */
+/*   ft_putnwstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/25 13:07:52 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/25 22:11:14 by fhong            ###   ########.fr       */
+/*   Created: 2018/07/28 21:35:26 by fhong             #+#    #+#             */
+/*   Updated: 2018/07/28 21:37:52 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_uintmax_t(uintmax_t nb)
+void	ft_putnwstr(wchar_t *wstr, size_t size)
 {
-	if (nb / 10)
+	size_t i;
+
+	i = 0;
+	while (wstr[i] && i < size)
 	{
-		ft_putnbr_uintmax_t(nb / 10);
-		ft_putchar(nb % 10 + '0');
+		ft_putwchar(wstr[i]);
+		i++;
 	}
-	else
-		ft_putchar(nb + '0');
 }

@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_intmax_t.c                               :+:      :+:    :+:   */
+/*   ft_size_t_new.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/25 13:07:52 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/25 22:11:14 by fhong            ###   ########.fr       */
+/*   Created: 2018/07/28 17:57:17 by fhong             #+#    #+#             */
+/*   Updated: 2018/07/29 01:23:58 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_uintmax_t(uintmax_t nb)
+size_t	*ft_size_t_new(size_t size)
 {
-	if (nb / 10)
+	size_t	*str;
+	int		i;
+
+	i = 0;
+	if (!(str = (size_t *)malloc(sizeof(size_t) * (size + 1))))
+		return (NULL);
+	while (str[i])
 	{
-		ft_putnbr_uintmax_t(nb / 10);
-		ft_putchar(nb % 10 + '0');
+		str[i] = '\0';
+		i++;
 	}
-	else
-		ft_putchar(nb + '0');
+	return (str);
 }

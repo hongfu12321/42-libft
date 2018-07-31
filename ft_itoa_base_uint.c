@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_intmax_t.c                               :+:      :+:    :+:   */
+/*   ft_itoa_base_uint.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/25 13:07:52 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/25 22:11:14 by fhong            ###   ########.fr       */
+/*   Created: 2018/07/26 23:31:23 by fhong             #+#    #+#             */
+/*   Updated: 2018/07/26 23:38:41 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_uintmax_t(uintmax_t nb)
+char	*ft_itoa_base_uint(uintmax_t nb, char *base)
 {
-	if (nb / 10)
+	uintmax_t	base_len;
+	char		*result;
+	int			i;
+
+	i = 0;
+	base_len = ft_strlen(base);
+	if (base_len < 2 || 16 < base_len)
+		return (NULL);
+	result = ft_memalloc(sizeof(char) * 35);
+	while (base_len <= nb)
 	{
-		ft_putnbr_uintmax_t(nb / 10);
-		ft_putchar(nb % 10 + '0');
+		result[i++] = base[nb % base_len];
+		nb = nb / base_len;
 	}
-	else
-		ft_putchar(nb + '0');
+	if (base_len > nb)
+		result[i++] = base[nb];
+	result[i] = '\0';
+	ft_strrev(result);
+	return (result);
 }

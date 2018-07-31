@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_intmax_t.c                               :+:      :+:    :+:   */
+/*   ft_putnbr_uintmax_t_base.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/25 13:07:52 by fhong             #+#    #+#             */
-/*   Updated: 2018/07/25 22:11:14 by fhong            ###   ########.fr       */
+/*   Created: 2018/07/29 02:13:30 by fhong             #+#    #+#             */
+/*   Updated: 2018/07/29 02:16:44 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_uintmax_t(uintmax_t nb)
+void	ft_putnbr_uintmax_t_base(uintmax_t value, char *base)
 {
-	if (nb / 10)
-	{
-		ft_putnbr_uintmax_t(nb / 10);
-		ft_putchar(nb % 10 + '0');
-	}
-	else
-		ft_putchar(nb + '0');
+	uintmax_t base_len;
+
+	base_len = ft_strlen(base);
+	if (value >= base_len)
+		ft_putnbr_base(value / base_len, base);
+	write(1, &base[value % base_len], 1);
 }
