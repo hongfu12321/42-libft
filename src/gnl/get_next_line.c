@@ -6,13 +6,12 @@
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/01 19:04:33 by fhong             #+#    #+#             */
-/*   Updated: 2018/06/21 16:41:07 by fhong            ###   ########.fr       */
+/*   Updated: 2018/08/14 16:57:08 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include "libft.h"
-#include <stdio.h>
+#include <libft.h>
+#include <get_next_line.h>
 
 char	*my_strsearch(char *str, char c)
 {

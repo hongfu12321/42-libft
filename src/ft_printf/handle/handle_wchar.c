@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   handle_wchar.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/25 16:32:43 by fhong             #+#    #+#             */
-/*   Updated: 2018/06/30 15:07:17 by fhong            ###   ########.fr       */
+/*   Created: 2018/07/24 23:55:36 by fhong             #+#    #+#             */
+/*   Updated: 2018/08/14 13:59:09 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include <ft_printf.h>
 
-# define BUFF_SIZE 42
-# include <fcntl.h>
+size_t	handle_wchar(va_list ap, t_arg *args)
+{
+	wchar_t	wc;
 
-int		get_next_line(const int fd, char **line);
-
-#endif
+	wc = va_arg(ap, wchar_t);
+	if (!MINUS && WIDTH > 0)
+	{
+		if (ZERO)
+			ft_put_char_times('0', WIDTH - 1);
+		else
+			ft_put_char_times(' ', WIDTH - 1);
+	}
+	ft_putwchar(wc);
+	if (MINUS && WIDTH > 0)
+		ft_put_char_times(' ', WIDTH - 1);
+	if (WIDTH > 0)
+		return ((size_t)WIDTH);
+	return (1);
+}
