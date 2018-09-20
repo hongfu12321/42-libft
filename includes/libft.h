@@ -6,7 +6,7 @@
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 08:35:54 by fhong             #+#    #+#             */
-/*   Updated: 2018/09/19 21:28:37 by fhong            ###   ########.fr       */
+/*   Updated: 2018/09/20 00:41:33 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ void				*ft_memalloc(size_t size);
 */
 
 int					ft_atoi(const char *str);
+intmax_t			ft_atoi_intmax(const char *str);
 size_t				ft_intlen_base(intmax_t value, int base);
 size_t				ft_uintlen_base(uintmax_t value, int base);
 char				*ft_itoa(int n);

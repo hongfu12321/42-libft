@@ -6,7 +6,7 @@
 #    By: fhong <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/02 10:18:57 by fhong             #+#    #+#              #
-#    Updated: 2018/09/19 21:28:07 by fhong            ###   ########.fr        #
+#    Updated: 2018/09/20 00:42:16 by fhong            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ MEM			:=	ft_bzero ft_memalloc ft_memccpy ft_memchr ft_memcmp ft_memcpy ft_swap	\
 				ft_memdel ft_memmove ft_memset
 
 NBR			:=	ft_atoi ft_intlen_base ft_intnew ft_size_t_new ft_uintlen_base ft_itoa 	\
-				ft_itoa_base ft_itoa_base_uint
+				ft_itoa_base ft_itoa_base_uint ft_atoi_intmax
 
 PUT			:=	ft_put_base_unsigned ft_put_char_times ft_putchar ft_putchar_fd			\
 				ft_putendl ft_putendl_fd ft_putnbr ft_putnbr_base ft_putnbr_fd			\
@@ -74,7 +74,6 @@ $(NAME): $(OBJ)
 clean:
 	@rm -f $(OBJ)
 	@rm -f *.DS_Store
-	@echo "\033[32mRemoved Object Files\033[0m"
 
 fclean: clean
 	@rm -f $(NAME)
