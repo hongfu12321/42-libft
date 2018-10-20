@@ -6,7 +6,7 @@
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 23:00:59 by fhong             #+#    #+#             */
-/*   Updated: 2018/09/20 00:17:42 by fhong            ###   ########.fr       */
+/*   Updated: 2018/10/19 17:07:20 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,38 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
-# include <stdio.h>
+# include <limits.h>
 # include "libft.h"
 
-# define HASH		args->hash
-# define MINUS		args->minus
-# define PLUS		args->plus
-# define SPACE		args->space
-# define ZERO		args->zero
-# define FLAG		HASH + MINUS + PLUS + SPACE + ZERO
-# define NEGATIVE	args->negative
-# define WIDTH		args->width
-# define PRECISION	args->precision
-# define LENGTH		args->length
-# define SPECIFIER	args->specifier
+# define RESET			"\033[0m"
+# define BLACK			"\033[30m"
+# define RED			"\033[31m"
+# define GREEN			"\033[32m"
+# define YELLOW			"\033[33m"
+# define BLUE			"\033[34m"
+# define MAGENTA		"\033[35m"
+# define CYAN    		"\033[36m"
+# define WHITE   		"\033[37m"
+# define BOLDBLACK		"\033[1m\033[30m"
+# define BOLDRED		"\033[1m\033[31m"
+# define BOLDGREEN		"\033[1m\033[32m"
+# define BOLDYELLOW		"\033[1m\033[33m"
+# define BOLDBLUE		"\033[1m\033[34m"
+# define BOLDMAGENTA	"\033[1m\033[35m"
+# define BOLDCYAN		"\033[1m\033[36m"
+# define BOLDWHITE		"\033[1m\033[37m"
+
+# define HASH			args->hash
+# define MINUS			args->minus
+# define PLUS			args->plus
+# define SPACE			args->space
+# define ZERO			args->zero
+# define FLAG			HASH + MINUS + PLUS + SPACE + ZERO
+# define NEGATIVE		args->negative
+# define WIDTH			args->width
+# define PRECISION		args->precision
+# define LENGTH			args->length
+# define SPECIFIER		args->specifier
 # define TRUE(x, y)	x > y ? x - y : 0
 
 typedef struct		s_arg
@@ -44,7 +62,7 @@ typedef struct		s_arg
 	char			specifier;
 }					t_arg;
 
-typedef size_t		(*t_func)(va_list, t_arg *);
+typedef size_t		(*t_func)(va_list va, t_arg *arg);
 
 /*
 **	main.c
@@ -107,24 +125,5 @@ size_t				handle_escape(va_list ap, t_arg *args);
 size_t				handle_octal(va_list ap, t_arg *args);
 size_t				handle_hex(va_list ap, t_arg *args);
 size_t				handle_ptr(va_list ap, t_arg *args);
-
-# define BLACK		"\033[0;30m"
-# define BLUE		"\033[0;34m"
-# define CYAN		"\033[1;36m"
-# define DARKYELLOW	"\033[0;33m"
-# define GREEN		"\033[0;32m"
-# define GREY		"\033[1;30m"
-# define LAVENDER	"\033[1;35m"
-# define LIGHTBLUE	"\033[0;36m"
-# define LIGHTGREY	"\033[0;37m"
-# define LIME		"\033[1;32m"
-# define MAGENTA	"\033[0;35m"
-# define PINK		"\033[1;31m"
-# define PURPLE		"\033[1;34m"
-# define RED		"\033[0;31m"
-# define UNDERLINE	"\033[4m"
-# define WHITE		"\033[1;37m"
-# define YELLOW		"\033[1;33m"
-# define RESET		"\033[0m"
 
 #endif

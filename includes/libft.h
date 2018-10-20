@@ -6,7 +6,7 @@
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 08:35:54 by fhong             #+#    #+#             */
-/*   Updated: 2018/09/20 00:41:33 by fhong            ###   ########.fr       */
+/*   Updated: 2018/10/18 10:22:24 by fuhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -164,5 +164,12 @@ void				ft_putnwstr(wchar_t *wstr, size_t n);
 
 void				ft_putnbr_uintmax_t(uintmax_t nb);
 void				ft_putnbr_uintmax_t_base(uintmax_t value, char *base);
+
+/*
+** other
+*/
+
+void				ft_exit(char *str);
+void				ft_tablefree(char **table);
 
 #endif
