@@ -6,7 +6,7 @@
 #    By: fhong <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/02 10:18:57 by fhong             #+#    #+#              #
-#    Updated: 2018/10/18 10:22:58 by fuhong           ###   ########.fr        #
+#    Updated: 2019/05/28 23:18:05 by fhong            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,8 +30,8 @@ NBR			:=	ft_atoi ft_intlen_base ft_intnew ft_size_t_new ft_uintlen_base ft_itoa 
 
 PUT			:=	ft_put_base_unsigned ft_put_char_times ft_putchar ft_putchar_fd			\
 				ft_putendl ft_putendl_fd ft_putnbr ft_putnbr_base ft_putnbr_fd			\
-				ft_putnbr_uintmax_t ft_putnbr_uintmax_t_base ft_putnstr ft_putnwstr		\
-				ft_putnwchar ft_putstr ft_putstr_fd ft_putwchar ft_putwstr
+				ft_putnbr_uintmax_t ft_putnbr_uintmax_t_base ft_putnstr ft_putstr		\
+				ft_putstr_fd
 
 STR			:=	ft_strcat ft_strcmp ft_strdup ft_striteri ft_strlen ft_strncat			\
 				ft_strnequ ft_strnstr ft_strsplit ft_strtrim ft_wstrlen ft_strchr		\
@@ -44,7 +44,10 @@ OTHER		:=	ft_exit ft_tablefree
 
 GNL			:=	get_next_line
 
-FT_PRINTF	:=	ft_printf get_args get_handle_func get_nbr_length is_function tools		\
+FT_PRINTF	:=	buffer diuoxb_setup ft_printf_c ft_printf_p set_flags dispatch			\
+				ft_printf ft_printf_diuoxb ft_printf_s
+
+T_FT_PRINTF	:=	ft_printf get_args get_handle_func get_nbr_length is_function tools		\
 				handle/handle_char handle/handle_escape handle/handle_wstr				\
 				handle/handle_int handle/handle_ptr handle/handle_hex handle/handle_str	\
 				handle/handle_unsigned handle/handle_wchar handle/handle_octal

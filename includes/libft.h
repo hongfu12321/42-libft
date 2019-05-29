@@ -6,7 +6,7 @@
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 08:35:54 by fhong             #+#    #+#             */
-/*   Updated: 2018/10/18 10:22:24 by fuhong           ###   ########.fr       */
+/*   Updated: 2019/05/28 23:15:31 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,9 +154,6 @@ t_list				*ft_lstmap(t_list *lst,
 */
 
 size_t				ft_wstrlen(wchar_t *wstr);
-void				ft_putwchar(wchar_t c);
-void				ft_putwstr(wchar_t *wstr);
-void				ft_putnwstr(wchar_t *wstr, size_t n);
 
 /*
 ** intmax_t uintmax_t
