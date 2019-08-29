@@ -6,7 +6,7 @@
 #    By: fhong <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/02 10:18:57 by fhong             #+#    #+#              #
-#    Updated: 2018/10/18 10:22:58 by fuhong           ###   ########.fr        #
+#    Updated: 2019/08/28 22:00:24 by fhong            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ STR			:=	ft_strcat ft_strcmp ft_strdup ft_striteri ft_strlen ft_strncat			\
 				ft_strcpy ft_strequ ft_strjoin ft_strmap ft_strncmp ft_strnew			\
 				ft_strrchr ft_strstr ft_tolower ft_strclr ft_strdel ft_striter			\
 				ft_strlcat ft_strmapi ft_strncpy ft_strnlen ft_strrev ft_strsub			\
-				ft_toupper
+				ft_toupper ft_strsplit_w
 
 OTHER		:=	ft_exit ft_tablefree
 
