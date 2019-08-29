@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/03 08:35:54 by fhong             #+#    #+#             */
-/*   Updated: 2019/08/28 21:59:55 by fhong            ###   ########.fr       */
+/*   Created: 2019/08/28 22:23:02 by fhong             #+#    #+#             */
+/*   Updated: 2019/08/28 22:23:16 by fhong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,9 +155,6 @@ t_list				*ft_lstmap(t_list *lst,
 */
 
 size_t				ft_wstrlen(wchar_t *wstr);
-void				ft_putwchar(wchar_t c);
-void				ft_putwstr(wchar_t *wstr);
-void				ft_putnwstr(wchar_t *wstr, size_t n);
 
 /*
 ** intmax_t uintmax_t
